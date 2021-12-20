@@ -299,13 +299,7 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE := false
 BOARD_EXYNOS_S10B_FORMAT_ALIGN := 64
 
 # NeuralNetworks
-GPU_SOURCE_PRESENT := $(wildcard vendor/arm/mali/valhall)
-GPU_PREBUILD_PRESENT := $(wildcard vendor/google_devices/$(TARGET_DEVICE)/proprietary)
-ifneq (,$(strip $(GPU_SOURCE_PRESENT) $(GPU_PREBUILD_PRESENT)))
 ARMNN_COMPUTE_CL_ENABLE := 1
-else
-ARMNN_COMPUTE_CL_ENABLE := 0
-endif
 ARMNN_COMPUTE_NEON_ENABLE := 1
 
 # Boot.img
