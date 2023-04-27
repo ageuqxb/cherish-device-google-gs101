@@ -759,7 +759,7 @@ on property:sys.boot_completed=1
     write /proc/vendor_sched/sys_prefer_idle 0
     # cfs_rq clamp is using tg->uclamp setting
     # align it with the vendor_group setting
-    write /proc/vendor_sched/bg_uclamp_max 512
+    write /proc/vendor_sched/bg_uclamp_max 256
     write /dev/cpuctl/background/cpu.uclamp.max 50
     write /proc/vendor_sched/sysbg_uclamp_max 512
     write /dev/cpuctl/system-background/cpu.uclamp.max 50
