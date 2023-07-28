@@ -23,6 +23,9 @@ ifeq ($(DEVICE_IS_64BIT_ONLY),true)
 LOCAL_64ONLY := _64
 endif
 
+# SCUDO Flags
+PRODUCT_USE_SCUDO := true
+
 AB_OTA_POSTINSTALL_CONFIG += \
 	RUN_POSTINSTALL_system=true \
 	POSTINSTALL_PATH_system=system/bin/otapreopt_script \
