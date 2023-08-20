@@ -262,6 +262,7 @@ DEVICE_MATRIX_FILE := \
 	device/google/gs101/compatibility_matrix.xml
 
 DEVICE_PACKAGE_OVERLAYS += device/google/gs101/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/gs101/overlay-extras
 
 # Enforce the Product interface
 PRODUCT_PRODUCT_VNDK_VERSION := current
