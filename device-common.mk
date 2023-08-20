@@ -26,6 +26,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.carrierlock.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.carrierlock.xml
 endif
 
+# Lineage Stuffs
+DEVICE_PACKAGE_OVERLAYS += device/google/gs101/overlay-extras
+
+PRODUCT_COPY_FILES += \
+    device/google/gs101/allowlist_com.google.android.as.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.google.android.as.xml
+
+PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
+
+PRODUCT_PACKAGES += \
+    EuiccSupportPixelOverlay
+
 # Android Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
